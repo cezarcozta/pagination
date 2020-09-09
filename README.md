@@ -23,12 +23,15 @@ Here is a simple table with pagination.
 
 ```bash
 # Clone this repository
-$ git clone https://
+$ git clone https://github.com/cezarcozta/pagination.git  
 
-# Install dependencies
+# Access project folder
+$ cd pagination
+
+# Install all dependencies
 $ yarn
 
-# Run
+# Run the project
 $ yarn start
 
 # Localhost
