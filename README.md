@@ -15,7 +15,7 @@ Here is a simple table with pagination.
 - Axios  
 - styled-components
 - ReactJS
-- TypeScripthttps://swapi.dev/
+- TypeScript  
 
 ### Getting Started  
 
