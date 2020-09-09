@@ -1,5 +1,14 @@
 # Frontend Pratice - ReactJS - Pagination  
 
+<div
+  align="center"
+>
+  <img
+    src="https://github.com/cezarcozta/pagination/blob/master/src/assets/pagination.gif"
+    alt ="cezarcozta.com"
+  />
+</div>  
+
 ```bash
 This project I pratice ReactJS doing a simple pagination at https://swapi.dev/.
 
