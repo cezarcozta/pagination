@@ -8,14 +8,13 @@ export const Container = styled.div`
   align-items: center;
 
   background: #313131;
-  color: #313131;
-  font-size: 16px;
+  color: #000;
+  font-size: 18px;
 `;
 
 export const Content = styled.table`
-  width: 500px;
   border-collapse: collapse;
-
+  min-width: 500px;
   
   th {
     padding: 10px;
@@ -57,11 +56,12 @@ export const Nav = styled.ul`
   list-style: none;
 `;
 
-export const Item = styled.li`
+export const Item = styled.button`
   display: flex;
   align-items: center;
-
   margin: 0 10px;
+
+  cursor: pointer;
 `;
 
 

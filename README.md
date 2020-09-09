@@ -1,7 +1,9 @@
 # Frontend Pratice - ReactJS - Pagination  
 
 ```bash
-This project I pratice ReactJS doing a simple pagination.  
+This project I pratice ReactJS doing a simple pagination at https://swapi.dev/.
+
+An Star Wars API.
 
 Pagination is a basic feature at any web system and I see an oportuinty to learn.
 
@@ -13,7 +15,7 @@ Here is a simple table with pagination.
 - Axios  
 - styled-components
 - ReactJS
-- TypeScript
+- TypeScripthttps://swapi.dev/
 
 ### Getting Started  
 

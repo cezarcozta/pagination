@@ -15,16 +15,16 @@ interface IData {
 const Table: React.FC = () => {
   const [data, setData] = useState<IData[]>([]);
   const [total, setTotal] = useState(0);
-  const [limit, setLimit] = useState(5);
   const [pages, setPages] = useState<number[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
     async function loadTable() {
-      const response = await api.get(`/planets`);
+      const response = await api.get(`/planets?page=${currentPage}`);
 
       setTotal(response.data.count);
 
-      const totalPages = Math.ceil(total / limit);
+      const totalPages = Math.ceil(total / response.data.results.length);
 
       const arrayPages = [];
       for (let i = 1; i <= totalPages; i++) {
@@ -32,16 +32,17 @@ const Table: React.FC = () => {
       }
 
       setPages(arrayPages);
+
       setData(response.data.results);
     }
 
     loadTable();
-  }, [limit, setPages, total]);
+  }, [currentPage, setPages, total]);
 
 
   return (
     <Container>
-      <h3>Table of products</h3>
+      <h3>Table of Planets</h3>
 
       <Content>
         <thead>
@@ -69,18 +70,27 @@ const Table: React.FC = () => {
       <Pagination>
         <div>Total: {total}</div>
         <Nav>
-          <Prev>
-            Prev
-          </Prev>
+          {currentPage > 1 && (
+            <Prev onClick={() => setCurrentPage(currentPage - 1)}>
+              Prev
+            </Prev>
+          )}
           {pages && pages.map(page => (
-            <Item>{page}</Item>
+            <Item
+              key={page}
+              onClick={() => setCurrentPage(page)}
+            >
+              {page}
+            </Item>
           ))}
-          <Next>
-            Next
-          </Next>
+          {currentPage < pages.length && (
+            <Next onClick={() => setCurrentPage(currentPage + 1)}>
+              Next
+            </Next>
+          )}
         </Nav>
       </Pagination>
-    </Container>
+    </Container >
   );
 };
 
