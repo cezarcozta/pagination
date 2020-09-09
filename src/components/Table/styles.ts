@@ -8,8 +8,14 @@ export const Container = styled.div`
   align-items: center;
 
   background: #313131;
-  color: #000;
+  color: #313131;
   font-size: 18px;
+
+  h3{
+    font-size: 22px;
+    font-weight: bold;
+    color: #D3D3D3;
+  }
 `;
 
 export const Content = styled.table`
