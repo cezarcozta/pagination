@@ -40,4 +40,4 @@ http://localhost:3000
 
 #### Author
 
-César Auguto Costa  
+[César Auguto Costa](https://cezarcozta.com)  
