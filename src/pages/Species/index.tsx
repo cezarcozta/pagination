@@ -6,13 +6,14 @@ import { Container, Content, Pagination, Nav, Item, Prev, Next } from './styles'
 
 interface IData {
   name: string;
-  diameter: string;
-  climate: string;
-  population: string;
-  gravity: string;
+  classification: string;
+  designation: string;
+  average_lifespan: string;
+  average_height: string;
+  language: string;
 }
 
-const Table: React.FC = () => {
+const Species: React.FC = () => {
   const [data, setData] = useState<IData[]>([]);
   const [total, setTotal] = useState(0);
   const [pages, setPages] = useState<number[]>([]);
@@ -20,7 +21,7 @@ const Table: React.FC = () => {
 
   useEffect(() => {
     async function loadTable() {
-      const response = await api.get(`/planets?page=${currentPage}`);
+      const response = await api.get(`/species?page=${currentPage}`);
 
       setTotal(response.data.count);
 
@@ -42,24 +43,28 @@ const Table: React.FC = () => {
 
   return (
     <Container>
+      <h3>Species</h3>
+
       <Content>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Diameter</th>
-            <th>Climate</th>
-            <th>Population</th>
-            <th>Gravity</th>
+            <th>Classification</th>
+            <th>Designation</th>
+            <th>Average Height</th>
+            <th>Average Life Span</th>
+            <th>language</th>
           </tr>
         </thead>
         <tbody>
           {data.map(d => (
             <tr key={d.name}>
               <td>{d.name}</td>
-              <td>{d.diameter}</td>
-              <td>{d.climate}</td>
-              <td>{d.population}</td>
-              <td>{d.gravity}</td>
+              <td>{d.classification}</td>
+              <td>{d.designation}</td>
+              <td>{d.average_height}</td>
+              <td>{d.average_lifespan}</td>
+              <td>{d.language}</td>
             </tr>
           ))}
         </tbody>
@@ -92,4 +97,4 @@ const Table: React.FC = () => {
   );
 };
 
-export default Table;
+export default Species;

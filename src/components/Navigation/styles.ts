@@ -3,12 +3,13 @@ import styled from 'styled-components';
 export const Container = styled.nav`
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  background: #313131;
 `;
 
 export const Nav = styled.ul`
   list-style: none;
-  margin-bottom: -500px;
+  margin-right: 100px;
 `;
 
 export const NavItem = styled.li`
@@ -18,4 +19,5 @@ export const NavItem = styled.li`
   flex-direction: column;
   border: 1px solid #000;
   border-radius: 6px;
+  text-decoration: none;
 `;

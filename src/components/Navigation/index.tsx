@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import Routes from '../../routes';
+
 import { Container, Nav, NavItem } from './styles';
 
 const Navigation: React.FC = () => {
@@ -32,6 +34,7 @@ const Navigation: React.FC = () => {
           <Link to="/">Planets</Link>
         </NavItem>
       </Nav>
+      <Routes />
     </Container>
   );
 };

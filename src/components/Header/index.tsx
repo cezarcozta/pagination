@@ -5,7 +5,7 @@ import { Container } from './styles';
 const Header: React.FC = () => {
   return (
     <Container>
-      <h3>Table Of STAR WARS (Component)</h3>
+      <h3>Tables of STAR WARS</h3>
     </Container>
   );
 };
