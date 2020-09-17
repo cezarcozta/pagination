@@ -42,8 +42,6 @@ const Table: React.FC = () => {
 
   return (
     <Container>
-      <h3>Table of STAR WARS Planets</h3>
-
       <Content>
         <thead>
           <tr>
