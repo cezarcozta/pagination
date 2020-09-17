@@ -3,8 +3,10 @@
 <div
   align="center"
 >
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/0aca1895-9118-4efd-96d4-f1df14925834/deploy-status)](https://app.netlify.com/sites/swars/deploys)
+
   <img
-    src="https://github.com/cezarcozta/pagination/blob/master/src/assets/pagination.gif"
+    src="https://github.com/cezarcozta/pagination/blob/master/src/assets/pagwars.gif"
     alt ="cezarcozta.com"
   />
 </div>  
@@ -18,6 +20,8 @@ Pagination is a basic feature at any web system and I see an oportuinty to learn
 
 Here is a simple table with pagination.  
 ```
+
+Try it: [site]https://swars.netlify.app
 
 ## Techs and Tools  
 
