@@ -10,6 +10,7 @@ export const Container = styled.nav`
 export const Nav = styled.ul`
   list-style: none;
   margin-right: 100px;
+  text-decoration: none;
 `;
 
 export const NavItem = styled.li`
@@ -19,5 +20,15 @@ export const NavItem = styled.li`
   flex-direction: column;
   border: 1px solid #000;
   border-radius: 6px;
-  text-decoration: none;
+
+
+  a {
+    text-decoration: none;
+    transition: 0.2s;
+    color: #000;
+  }
+  
+  :hover {
+    opacity: 0.8;
+  }
 `;
